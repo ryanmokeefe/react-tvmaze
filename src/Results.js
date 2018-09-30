@@ -2,19 +2,19 @@ import React, {Component} from 'react';
 
 class Results extends Component {
     // constructor(props) {
-    //     super(props)
-    //     // this.state = {
-    //     //     query: ''
-    //     // }
-    // }
+    //         super(props)
+    //         this.state = {
+    //             query,
+    //         }
+    //     }
 
     render () {
 
-        let results = this.props.showsQuerried.map((show, index) => {
+        let results = this.props.shows.map((show, index) => {
             return (
                 <div key={index}>
-                <img src={show.image} alt={show.name} />
-                <p>{show.name}</p>
+                    <img src={show.image} alt={show.name} />
+                    <p>{show.name}</p>
                 </div>
             )
         })

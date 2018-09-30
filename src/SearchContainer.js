@@ -54,7 +54,7 @@ class SearchContainer extends Component {
             shows,
             hasSearched: false,
             query: '',
-            showsQuerried: []
+            // showsQuerried: []
         };
         this.onSubmitQuery = this.onSubmitQuery.bind(this); 
         this.handleSearchInput = this.handleSearchInput.bind(this);
@@ -98,7 +98,7 @@ class SearchContainer extends Component {
 
         return (
             <div> 
-                { this.state.hasSearched ? <Results shows={this.state.shows} onSubmitReturn={this.onSubmitReturn} /> : <Search handleSearchInput={this.handleSearchInput} query={this.state.query} showsQuerried={this.state.showsQuerried} onSubmitQuery={this.onSubmitQuery} />
+                { this.state.hasSearched ? <Results shows={this.state.shows} query={this.state.query} onSubmitReturn={this.onSubmitReturn} /> : <Search handleSearchInput={this.handleSearchInput} query={this.state.query} showsQuerried={this.state.showsQuerried} onSubmitQuery={this.onSubmitQuery} />
                 }
             </div>
         )
